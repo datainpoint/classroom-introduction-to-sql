@@ -22,6 +22,11 @@
 - [資料分析](slides/03-analyzing-data.slides.html)
 - [操作資料](slides/04-operating-data.slides.html)
 
+如何將投影片轉換為 PDF 格式並下載？
+- 在網址後面加上 `?print-pdf` 成為 `slides.html?print-pdf` 並按下 Enter
+- 將網址貼上至 Chrome 瀏覽器
+- 檔案 > 列印... > 另存為 PDF
+
 ## 隨堂練習上傳表單
 
 <https://forms.gle/BvJ2DMhMosR4aj8B9>
@@ -31,4 +36,4 @@
 - [Practical SQL](https://www.amazon.com/Practical-SQL-Beginners-Guide-Storytelling/dp/1593278276)
 - [DataCamp](https://www.datacamp.com/search?q=sql&tap_a=5644-dce66f&tap_s=194899-1fb421&utm_medium=affiliate&utm_source=tonykuo)
 - [Excel to MySQL: Analytic Techniques for Business Specialization](https://www.coursera.org/specializations/excel-mysql)
-- [Datainpoint Substack](https://datainpoint.substack.com/welcome)
+- [Datainpoint Substack](https://datainpoint.substack.com/about)
