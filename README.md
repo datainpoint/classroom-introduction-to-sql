@@ -20,7 +20,8 @@
 - [快速啟動](slides/01-getting-started.slides.html)
 - [基本查詢](slides/02-retrieving-data.slides.html)
 - [資料分析](slides/03-analyzing-data.slides.html)
-- [操作資料](slides/04-operating-data.slides.html)
+- [聯結表格](slides/04-merging-data.slides.html)
+- [操作資料](slides/05-operating-data.slides.html)
 
 如何將投影片轉換為 PDF 格式並下載？
 - 在網址後面加上 `?print-pdf` 成為 `slides.html?print-pdf` 並按下 Enter

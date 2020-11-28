@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>03-analyzing-data slides</title>
+<title>04-merging-data slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13202,7 +13202,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="SQL-&#20837;&#38272;">SQL &#20837;&#38272;<a class="anchor-link" href="#SQL-&#20837;&#38272;">&#182;</a></h1><blockquote><p>資料分析</p>
+<h1 id="SQL-&#20837;&#38272;">SQL &#20837;&#38272;<a class="anchor-link" href="#SQL-&#20837;&#38272;">&#182;</a></h1><blockquote><p>聯結表格</p>
 </blockquote>
 <p>郭耀仁</p>
 
@@ -13232,8 +13232,7 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="&#25688;&#35201;">&#25688;&#35201;<a class="anchor-link" href="#&#25688;&#35201;">&#182;</a></h2><ul>
-<li>聚合與分組</li>
-<li>進階的 SQL 查詢技巧</li>
+<li>聯結關聯式資料庫中的表格</li>
 <li>隨堂練習</li>
 <li>隨堂練習參考解答</li>
 </ul>
@@ -13244,17 +13243,15 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32858;&#21512;&#33287;&#20998;&#32068;">&#32858;&#21512;&#33287;&#20998;&#32068;<a class="anchor-link" href="#&#32858;&#21512;&#33287;&#20998;&#32068;">&#182;</a></h2>
+<h2 id="&#32879;&#32080;&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;&#20013;&#30340;&#34920;&#26684;">&#32879;&#32080;&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;&#20013;&#30340;&#34920;&#26684;<a class="anchor-link" href="#&#32879;&#32080;&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;&#20013;&#30340;&#34920;&#26684;">&#182;</a></h2>
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#25105;&#20497;&#21487;&#20197;&#23559;&#20989;&#24335;&#31895;&#20998;&#28858;&#20841;&#31278;&#39006;&#22411;">&#25105;&#20497;&#21487;&#20197;&#23559;&#20989;&#24335;&#31895;&#20998;&#28858;&#20841;&#31278;&#39006;&#22411;<a class="anchor-link" href="#&#25105;&#20497;&#21487;&#20197;&#23559;&#20989;&#24335;&#31895;&#20998;&#28858;&#20841;&#31278;&#39006;&#22411;">&#182;</a></h2><ul>
-<li>通用函式（Universal functions）</li>
-<li>聚合函式（Aggregate functions）</li>
-</ul>
+<h2 id="&#20160;&#40636;&#26159;&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;">&#20160;&#40636;&#26159;&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;<a class="anchor-link" href="#&#20160;&#40636;&#26159;&#38364;&#32879;&#24335;&#36039;&#26009;&#24235;">&#182;</a></h2><blockquote><p>依照關聯式模型所建構的多個有相關的表格，關聯式模型指的是每個表格的觀測值層級都是獨立並且獨一，並能夠透過表格聯結將不同表格的觀測值關聯至一個查詢結果。</p>
+</blockquote>
 
 </div>
 </div>
@@ -13262,7 +13259,27 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20854;&#20013;&#36890;&#29992;&#20989;&#24335;&#30340;&#29305;&#24615;&#26159;&#36664;&#20837;&#33287;&#36664;&#20986;&#30340;&#21015;&#25976;&#30456;&#21516;">&#20854;&#20013;&#36890;&#29992;&#20989;&#24335;&#30340;&#29305;&#24615;&#26159;&#36664;&#20837;&#33287;&#36664;&#20986;&#30340;&#21015;&#25976;&#30456;&#21516;<a class="anchor-link" href="#&#20854;&#20013;&#36890;&#29992;&#20989;&#24335;&#30340;&#29305;&#24615;&#26159;&#36664;&#20837;&#33287;&#36664;&#20986;&#30340;&#21015;&#25976;&#30456;&#21516;">&#182;</a></h2>
+<h2 id="&#28858;&#20160;&#40636;&#38364;&#32879;&#24335;&#27169;&#22411;">&#28858;&#20160;&#40636;&#38364;&#32879;&#24335;&#27169;&#22411;<a class="anchor-link" href="#&#28858;&#20160;&#40636;&#38364;&#32879;&#24335;&#27169;&#22411;">&#182;</a></h2><blockquote><p>採用關聯式模型能夠減少資料的重複並且讓維護變得簡單。</p>
+</blockquote>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20351;&#29992;-JOIN-&#33287;-ON-&#20445;&#30041;&#23383;&#23559;&#36039;&#26009;&#36914;&#34892;&#38364;&#32879;">&#20351;&#29992; <code>JOIN</code> &#33287; <code>ON</code> &#20445;&#30041;&#23383;&#23559;&#36039;&#26009;&#36914;&#34892;&#38364;&#32879;<a class="anchor-link" href="#&#20351;&#29992;-JOIN-&#33287;-ON-&#20445;&#30041;&#23383;&#23559;&#36039;&#26009;&#36914;&#34892;&#38364;&#32879;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="o">*</span>
+  <span class="k">FROM</span> <span class="n">left_table</span> <span class="k">JOIN</span> <span class="n">right_table</span>
+    <span class="k">ON</span> <span class="n">left_table</span><span class="p">.</span><span class="n">primary_key_column</span> <span class="o">=</span> <span class="n">right_table</span><span class="p">.</span><span class="n">foreign_key_column</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#32879;&#32080;-players-&#33287;-careerSummaries">&#32879;&#32080; <code>players</code> &#33287; <code>careerSummaries</code><a class="anchor-link" href="#&#32879;&#32080;-players-&#33287;-careerSummaries">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13272,10 +13289,10 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT firstName,</span>
-<span class="s2">       UPPER(firstName) AS upper_first_name</span>
+<span class="s2">SELECT *</span>
 <span class="s2">  FROM players</span>
-<span class="s2"> LIMIT 10;</span>
+<span class="s2">  JOIN careerSummaries</span>
+<span class="s2">    ON players.personId = careerSummaries.personId;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
 
@@ -13326,62 +13343,296 @@ a.anchor-link {
     <tr style="text-align: right;">
       <th></th>
       <th>firstName</th>
-      <th>upper_first_name</th>
+      <th>lastName</th>
+      <th>temporaryDisplayName</th>
+      <th>personId</th>
+      <th>teamId</th>
+      <th>jersey</th>
+      <th>isActive</th>
+      <th>pos</th>
+      <th>heightFeet</th>
+      <th>heightInches</th>
+      <th>...</th>
+      <th>ftm</th>
+      <th>fta</th>
+      <th>pFouls</th>
+      <th>points</th>
+      <th>gamesPlayed</th>
+      <th>gamesStarted</th>
+      <th>plusMinus</th>
+      <th>min</th>
+      <th>dd2</th>
+      <th>td3</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
       <td>Vince</td>
-      <td>VINCE</td>
+      <td>Carter</td>
+      <td>Carter, Vince</td>
+      <td>1713</td>
+      <td>1610612737</td>
+      <td>15.0</td>
+      <td>True</td>
+      <td>G-F</td>
+      <td>6</td>
+      <td>6</td>
+      <td>...</td>
+      <td>4852.0</td>
+      <td>6082.0</td>
+      <td>3995.0</td>
+      <td>25728.0</td>
+      <td>1541.0</td>
+      <td>982.0</td>
+      <td>1816.0</td>
+      <td>46371.0</td>
+      <td>90.0</td>
+      <td>5.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>Tyson</td>
-      <td>TYSON</td>
+      <td>Chandler</td>
+      <td>Chandler, Tyson</td>
+      <td>2199</td>
+      <td>1610612745</td>
+      <td>19.0</td>
+      <td>True</td>
+      <td>C</td>
+      <td>7</td>
+      <td>0</td>
+      <td>...</td>
+      <td>2393.0</td>
+      <td>3714.0</td>
+      <td>3268.0</td>
+      <td>9509.0</td>
+      <td>1160.0</td>
+      <td>886.0</td>
+      <td>325.0</td>
+      <td>31617.0</td>
+      <td>292.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>LeBron</td>
-      <td>LEBRON</td>
+      <td>James</td>
+      <td>James, LeBron</td>
+      <td>2544</td>
+      <td>1610612747</td>
+      <td>23.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>9</td>
+      <td>...</td>
+      <td>7379.0</td>
+      <td>10044.0</td>
+      <td>2313.0</td>
+      <td>34087.0</td>
+      <td>1258.0</td>
+      <td>1257.0</td>
+      <td>6887.0</td>
+      <td>48327.0</td>
+      <td>485.0</td>
+      <td>94.0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>Carmelo</td>
-      <td>CARMELO</td>
+      <td>Anthony</td>
+      <td>Anthony, Carmelo</td>
+      <td>2546</td>
+      <td>1610612757</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>8</td>
+      <td>...</td>
+      <td>6028.0</td>
+      <td>7424.0</td>
+      <td>3204.0</td>
+      <td>26314.0</td>
+      <td>1114.0</td>
+      <td>1106.0</td>
+      <td>1614.0</td>
+      <td>39750.0</td>
+      <td>171.0</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>4</th>
       <td>Kyle</td>
-      <td>KYLE</td>
+      <td>Korver</td>
+      <td>Korver, Kyle</td>
+      <td>2594</td>
+      <td>1610612749</td>
+      <td>26.0</td>
+      <td>True</td>
+      <td>G-F</td>
+      <td>6</td>
+      <td>7</td>
+      <td>...</td>
+      <td>1290.0</td>
+      <td>1472.0</td>
+      <td>2512.0</td>
+      <td>11903.0</td>
+      <td>1224.0</td>
+      <td>422.0</td>
+      <td>2885.0</td>
+      <td>31056.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>Udonis</td>
-      <td>UDONIS</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>Dwight</td>
-      <td>DWIGHT</td>
+      <th>499</th>
+      <td>Matt</td>
+      <td>Thomas</td>
+      <td>Thomas, Matt</td>
+      <td>1629744</td>
+      <td>1610612761</td>
+      <td>21.0</td>
+      <td>True</td>
+      <td>G</td>
+      <td>6</td>
+      <td>4</td>
+      <td>...</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>150.0</td>
+      <td>33.0</td>
+      <td>0.0</td>
+      <td>22.0</td>
+      <td>321.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>Andre</td>
-      <td>ANDRE</td>
+      <th>500</th>
+      <td>Tariq</td>
+      <td>Owens</td>
+      <td>Owens, Tariq</td>
+      <td>1629745</td>
+      <td>1610612756</td>
+      <td>41.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>10</td>
+      <td>...</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>-16.0</td>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>JR</td>
-      <td>JR</td>
+      <th>501</th>
+      <td>Javonte</td>
+      <td>Green</td>
+      <td>Green, Javonte</td>
+      <td>1629750</td>
+      <td>1610612738</td>
+      <td>43.0</td>
+      <td>True</td>
+      <td>G-F</td>
+      <td>6</td>
+      <td>4</td>
+      <td>...</td>
+      <td>23.0</td>
+      <td>36.0</td>
+      <td>37.0</td>
+      <td>127.0</td>
+      <td>44.0</td>
+      <td>1.0</td>
+      <td>-5.0</td>
+      <td>414.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
-      <th>9</th>
-      <td>Trevor</td>
-      <td>TREVOR</td>
+      <th>502</th>
+      <td>Juwan</td>
+      <td>Morgan</td>
+      <td>Morgan, Juwan</td>
+      <td>1629752</td>
+      <td>1610612762</td>
+      <td>16.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>19.0</td>
+      <td>16.0</td>
+      <td>0.0</td>
+      <td>19.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>503</th>
+      <td>Matt</td>
+      <td>Mooney</td>
+      <td>Mooney, Matt</td>
+      <td>1629760</td>
+      <td>1610612739</td>
+      <td>31.0</td>
+      <td>True</td>
+      <td>G</td>
+      <td>6</td>
+      <td>2</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>18.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
+<p>504 rows × 51 columns</p>
 </div>
 </div>
 
@@ -13394,18 +13645,24 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32858;&#21512;&#20989;&#24335;&#30340;&#29305;&#24615;&#21063;&#26159;&#36664;&#20986;&#30340;&#21015;&#25976;&#22810;&#21322;&#36960;&#23569;&#26044;&#36664;&#20837;&#30340;&#21015;&#25976;">&#32858;&#21512;&#20989;&#24335;&#30340;&#29305;&#24615;&#21063;&#26159;&#36664;&#20986;&#30340;&#21015;&#25976;&#22810;&#21322;&#36960;&#23569;&#26044;&#36664;&#20837;&#30340;&#21015;&#25976;<a class="anchor-link" href="#&#32858;&#21512;&#20989;&#24335;&#30340;&#29305;&#24615;&#21063;&#26159;&#36664;&#20986;&#30340;&#21015;&#25976;&#22810;&#21322;&#36960;&#23569;&#26044;&#36664;&#20837;&#30340;&#21015;&#25976;">&#182;</a></h2>
+<h2 id="&#22312;&#35722;&#25976;&#19978;&#21152;&#19978;-key-&#30340;&#35387;&#35352;&#65306;&#20027;&#37749;&#65288;Primary-key&#65289;">&#22312;&#35722;&#25976;&#19978;&#21152;&#19978; key &#30340;&#35387;&#35352;&#65306;&#20027;&#37749;&#65288;Primary key&#65289;<a class="anchor-link" href="#&#22312;&#35722;&#25976;&#19978;&#21152;&#19978;-key-&#30340;&#35387;&#35352;&#65306;&#20027;&#37749;&#65288;Primary-key&#65289;">&#182;</a></h2><p>主鍵用來標註一個表格中獨立的觀測值，什麼樣的變數可以被標記為主鍵？</p>
+<ol>
+<li>必須獨一</li>
+<li>不得有遺漏值</li>
+</ol>
+
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT AVG(heightMeters) AS avg_height_meters</span>
-<span class="s2">  FROM players;</span>
+<span class="s2">SELECT name</span>
+<span class="s2">  FROM PRAGMA_TABLE_INFO(&#39;players&#39;)</span>
+<span class="s2"> WHERE pk = 1;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
@@ -13443,13 +13700,13 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>avg_height_meters</th>
+      <th>name</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1.99121</td>
+      <td>personId</td>
     </tr>
   </tbody>
 </table>
@@ -13465,16 +13722,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="SQLite-&#24120;&#29992;&#30340;&#32858;&#21512;&#20989;&#24335;">SQLite &#24120;&#29992;&#30340;&#32858;&#21512;&#20989;&#24335;<a class="anchor-link" href="#SQLite-&#24120;&#29992;&#30340;&#32858;&#21512;&#20989;&#24335;">&#182;</a></h2><p><a href="https://www.sqlitetutorial.net/sqlite-aggregate-functions/">https://www.sqlitetutorial.net/sqlite-aggregate-functions/</a></p>
-<p>Source: <a href="https://www.sqlitetutorial.net/">https://www.sqlitetutorial.net/</a></p>
+<h2 id="&#22312;&#35722;&#25976;&#19978;&#21152;&#19978;-key-&#30340;&#35387;&#35352;&#65306;&#22806;&#37749;&#65288;Foreign-key&#65289;">&#22312;&#35722;&#25976;&#19978;&#21152;&#19978; key &#30340;&#35387;&#35352;&#65306;&#22806;&#37749;&#65288;Foreign key&#65289;<a class="anchor-link" href="#&#22312;&#35722;&#25976;&#19978;&#21152;&#19978;-key-&#30340;&#35387;&#35352;&#65306;&#22806;&#37749;&#65288;Foreign-key&#65289;">&#182;</a></h2><p>與其他具有相關的表格主鍵相對應的欄位可以被標註為外鍵。</p>
 
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-COUNT()-&#26296;&#35299;&#34920;&#26684;&#30340;&#35264;&#28204;&#20540;&#25976;">&#20351;&#29992; <code>COUNT()</code> &#26296;&#35299;&#34920;&#26684;&#30340;&#35264;&#28204;&#20540;&#25976;<a class="anchor-link" href="#&#20351;&#29992;-COUNT()-&#26296;&#35299;&#34920;&#26684;&#30340;&#35264;&#28204;&#20540;&#25976;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13484,8 +13733,8 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT COUNT(*) AS n_players</span>
-<span class="s2">  FROM players;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">  FROM PRAGMA_FOREIGN_KEY_LIST(&#39;players&#39;);</span>
 <span class="s2">&quot;&quot;&quot;</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
@@ -13523,13 +13772,38 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>n_players</th>
+      <th>id</th>
+      <th>seq</th>
+      <th>table</th>
+      <th>from</th>
+      <th>to</th>
+      <th>on_update</th>
+      <th>on_delete</th>
+      <th>match</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>504</td>
+      <td>0</td>
+      <td>0</td>
+      <td>careerSummaries</td>
+      <td>personId</td>
+      <td>personId</td>
+      <td>RESTRICT</td>
+      <td>RESTRICT</td>
+      <td>NONE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>0</td>
+      <td>teams</td>
+      <td>teamId</td>
+      <td>teamId</td>
+      <td>RESTRICT</td>
+      <td>RESTRICT</td>
+      <td>NONE</td>
     </tr>
   </tbody>
 </table>
@@ -13545,7 +13819,20 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-COUNT()-&#25645;&#37197;-PRAGMA_TABLE_INFO()-&#26296;&#35299;&#34920;&#26684;&#30340;&#27396;&#20301;&#25976;">&#20351;&#29992; <code>COUNT()</code> &#25645;&#37197; <code>PRAGMA_TABLE_INFO()</code> &#26296;&#35299;&#34920;&#26684;&#30340;&#27396;&#20301;&#25976;<a class="anchor-link" href="#&#20351;&#29992;-COUNT()-&#25645;&#37197;-PRAGMA_TABLE_INFO()-&#26296;&#35299;&#34920;&#26684;&#30340;&#27396;&#20301;&#25976;">&#182;</a></h2>
+<h2 id="JOIN-&#26159;&#38928;&#35373;&#30340;&#32879;&#32080;&#37007;&#36655;"><code>JOIN</code> &#26159;&#38928;&#35373;&#30340;&#32879;&#32080;&#37007;&#36655;<a class="anchor-link" href="#JOIN-&#26159;&#38928;&#35373;&#30340;&#32879;&#32080;&#37007;&#36655;">&#182;</a></h2><ul>
+<li><code>JOIN</code> 將左右表格的「交集」觀測值回傳</li>
+<li><code>LEFT JOIN</code> 將左表格「所有」觀測值回傳，對應不到的以遺漏值填補</li>
+<li><code>RIGHT JOIN</code> 將右表格「所有」觀測值回傳，對應不到的以遺漏值填補（SQLite 不支援）</li>
+<li><code>FULL OUTER JOIN</code> 將左右表格的「聯集」觀測值回傳，對應不到的以遺漏值填補（SQLite 不支援）</li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#24314;&#27083;&#19968;&#20491;&#24038;&#34920;&#26684;-veteran_players">&#24314;&#27083;&#19968;&#20491;&#24038;&#34920;&#26684; <code>veteran_players</code><a class="anchor-link" href="#&#24314;&#27083;&#19968;&#20491;&#24038;&#34920;&#26684;-veteran_players">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13555,82 +13842,24 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT COUNT(*) AS n_columns</span>
-<span class="s2">  FROM PRAGMA_TABLE_INFO(&#39;players&#39;);</span>
+<span class="s2">SELECT personId,</span>
+<span class="s2">       temporaryDisplayName</span>
+<span class="s2">  FROM players</span>
+<span class="s2"> LIMIT 10;</span>
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[6]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>n_columns</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>20</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-MAX()-&#33287;-MIN()-&#23563;&#25214;&#26368;&#22823;&#33287;&#26368;&#23567;&#20540;">&#20351;&#29992; <code>MAX()</code> &#33287; <code>MIN()</code> &#23563;&#25214;&#26368;&#22823;&#33287;&#26368;&#23567;&#20540;<a class="anchor-link" href="#&#20351;&#29992;-MAX()-&#33287;-MIN()-&#23563;&#25214;&#26368;&#22823;&#33287;&#26368;&#23567;&#20540;">&#182;</a></h2>
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT MAX(heightMeters),</span>
-<span class="s2">       MIN(heightMeters)</span>
-<span class="s2">  FROM players;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13666,15 +13895,60 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>MAX(heightMeters)</th>
-      <th>MIN(heightMeters)</th>
+      <th>personId</th>
+      <th>temporaryDisplayName</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>2.26</td>
-      <td>1.75</td>
+      <td>1713</td>
+      <td>Carter, Vince</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2199</td>
+      <td>Chandler, Tyson</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2544</td>
+      <td>James, LeBron</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2546</td>
+      <td>Anthony, Carmelo</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2594</td>
+      <td>Korver, Kyle</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2617</td>
+      <td>Haslem, Udonis</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2730</td>
+      <td>Howard, Dwight</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2738</td>
+      <td>Iguodala, Andre</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2747</td>
+      <td>Smith, JR</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2772</td>
+      <td>Ariza, Trevor</td>
     </tr>
   </tbody>
 </table>
@@ -13690,8 +13964,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-GROUP-BY">&#20351;&#29992; <code>GROUP BY</code><a class="anchor-link" href="#&#20351;&#29992;-GROUP-BY">&#182;</a></h2><p><code>GROUP BY</code> 如果單獨存在，作用與 <code>DISTINCT</code> 相同。</p>
-
+<h2 id="&#24314;&#27083;&#19968;&#20491;&#21491;&#34920;&#26684;-top_scorers">&#24314;&#27083;&#19968;&#20491;&#21491;&#34920;&#26684; <code>top_scorers</code><a class="anchor-link" href="#&#24314;&#27083;&#19968;&#20491;&#21491;&#34920;&#26684;-top_scorers">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13701,11 +13974,11 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT confName,</span>
-<span class="s2">       divName</span>
-<span class="s2">  FROM teams</span>
-<span class="s2"> GROUP BY divName</span>
-<span class="s2"> ORDER BY confName, divName;</span>
+<span class="s2">SELECT personId,</span>
+<span class="s2">       ppg</span>
+<span class="s2">  FROM careerSummaries</span>
+<span class="s2"> ORDER BY ppg DESC</span>
+<span class="s2"> LIMIT 10;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
 
@@ -13755,40 +14028,60 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>confName</th>
-      <th>divName</th>
+      <th>personId</th>
+      <th>ppg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>East</td>
-      <td>Atlantic</td>
+      <td>2544</td>
+      <td>27.1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>East</td>
-      <td>Central</td>
+      <td>201142</td>
+      <td>27.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>East</td>
-      <td>Southeast</td>
+      <td>201935</td>
+      <td>25.1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>West</td>
-      <td>Northwest</td>
+      <td>1629029</td>
+      <td>24.4</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>West</td>
-      <td>Pacific</td>
+      <td>203954</td>
+      <td>24.1</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>West</td>
-      <td>Southwest</td>
+      <td>203076</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>203081</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2546</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1629027</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1629627</td>
+      <td>23.6</td>
     </tr>
   </tbody>
 </table>
@@ -13804,7 +14097,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-GROUP-BY-&#25645;&#37197;&#32858;&#21512;&#20989;&#24335;&#23601;&#21487;&#20197;&#23526;&#29694;&#20998;&#32068;&#32858;&#21512;">&#20351;&#29992; <code>GROUP BY</code> &#25645;&#37197;&#32858;&#21512;&#20989;&#24335;&#23601;&#21487;&#20197;&#23526;&#29694;&#20998;&#32068;&#32858;&#21512;<a class="anchor-link" href="#&#20351;&#29992;-GROUP-BY-&#25645;&#37197;&#32858;&#21512;&#20989;&#24335;&#23601;&#21487;&#20197;&#23526;&#29694;&#20998;&#32068;&#32858;&#21512;">&#182;</a></h2>
+<h2 id="&#38928;&#35373;&#30340;-JOIN">&#38928;&#35373;&#30340; <code>JOIN</code><a class="anchor-link" href="#&#38928;&#35373;&#30340;-JOIN">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13814,12 +14107,17 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT country,</span>
-<span class="s2">       COUNT(*) AS n_players</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY country</span>
-<span class="s2"> ORDER BY n_players DESC, country</span>
-<span class="s2"> LIMIT 10;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">  FROM (SELECT personId,</span>
+<span class="s2">               temporaryDisplayName</span>
+<span class="s2">          FROM players</span>
+<span class="s2">         LIMIT 10) AS veteran_players</span>
+<span class="s2">  JOIN (SELECT personId,</span>
+<span class="s2">               ppg</span>
+<span class="s2">          FROM careerSummaries</span>
+<span class="s2">         ORDER BY ppg DESC</span>
+<span class="s2">         LIMIT 10) AS top_scorers</span>
+<span class="s2">    ON veteran_players.personId = top_scorers.personId;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 </pre></div>
 
@@ -13869,60 +14167,26 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>country</th>
-      <th>n_players</th>
+      <th>personId</th>
+      <th>temporaryDisplayName</th>
+      <th>personId</th>
+      <th>ppg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>USA</td>
-      <td>384</td>
+      <td>2544</td>
+      <td>James, LeBron</td>
+      <td>2544</td>
+      <td>27.1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Canada</td>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>France</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Australia</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Croatia</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Serbia</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Germany</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Latvia</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Spain</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Turkey</td>
-      <td>4</td>
+      <td>2546</td>
+      <td>Anthony, Carmelo</td>
+      <td>2546</td>
+      <td>23.6</td>
     </tr>
   </tbody>
 </table>
@@ -13935,20 +14199,44 @@ a.anchor-link {
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#25913;&#20197;-LEFT-JOIN-&#32879;&#32080;">&#25913;&#20197; <code>LEFT JOIN</code> &#32879;&#32080;<a class="anchor-link" href="#&#25913;&#20197;-LEFT-JOIN-&#32879;&#32080;">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT pos,</span>
-<span class="s2">       ROUND(AVG(heightMeters), 2) AS avgHeightMeters</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY pos</span>
-<span class="s2"> ORDER BY avgHeightMeters,</span>
-<span class="s2">          pos;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">  FROM (SELECT personId,</span>
+<span class="s2">               temporaryDisplayName</span>
+<span class="s2">          FROM players</span>
+<span class="s2">         LIMIT 10) AS veteran_players</span>
+<span class="s2">  LEFT JOIN (SELECT personId,</span>
+<span class="s2">                    ppg</span>
+<span class="s2">               FROM careerSummaries</span>
+<span class="s2">              ORDER BY ppg DESC</span>
+<span class="s2">              LIMIT 10) AS top_scorers</span>
+<span class="s2">    ON veteran_players.personId = top_scorers.personId;</span>
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13961,7 +14249,7 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13984,45 +14272,82 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>pos</th>
-      <th>avgHeightMeters</th>
+      <th>personId</th>
+      <th>temporaryDisplayName</th>
+      <th>personId</th>
+      <th>ppg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>G</td>
-      <td>1.90</td>
+      <td>1713</td>
+      <td>Carter, Vince</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>G-F</td>
-      <td>1.98</td>
+      <td>2199</td>
+      <td>Chandler, Tyson</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>F-G</td>
-      <td>2.00</td>
+      <td>2544</td>
+      <td>James, LeBron</td>
+      <td>2544.0</td>
+      <td>27.1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>F</td>
-      <td>2.03</td>
+      <td>2546</td>
+      <td>Anthony, Carmelo</td>
+      <td>2546.0</td>
+      <td>23.6</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>F-C</td>
-      <td>2.09</td>
+      <td>2594</td>
+      <td>Korver, Kyle</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>C-F</td>
-      <td>2.10</td>
+      <td>2617</td>
+      <td>Haslem, Udonis</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>C</td>
-      <td>2.12</td>
+      <td>2730</td>
+      <td>Howard, Dwight</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2738</td>
+      <td>Iguodala, Andre</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2747</td>
+      <td>Smith, JR</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2772</td>
+      <td>Ariza, Trevor</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -14038,40 +14363,18 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-HAVING-&#31721;&#36984;&#32858;&#21512;&#24460;&#30340;&#25976;&#20540;">&#20351;&#29992; <code>HAVING</code> &#31721;&#36984;&#32858;&#21512;&#24460;&#30340;&#25976;&#20540;<a class="anchor-link" href="#&#20351;&#29992;-HAVING-&#31721;&#36984;&#32858;&#21512;&#24460;&#30340;&#25976;&#20540;">&#182;</a></h2><ul>
-<li><code>WHERE</code> 應對以單個「觀測值」為層級的數值</li>
-<li><code>HAVING</code> 應對多個「觀測值」為層級的數值</li>
-</ul>
-
+<h2 id="&#20197;-Python-pandas-&#31034;&#31684;-RIGHT-JOIN">&#20197; Python pandas &#31034;&#31684; <code>RIGHT JOIN</code><a class="anchor-link" href="#&#20197;-Python-pandas-&#31034;&#31684;-RIGHT-JOIN">&#182;</a></h2>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT country,</span>
-<span class="s2">       COUNT(*) AS n_players</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY country</span>
-<span class="s2">HAVING n_players &gt; 5</span>
-<span class="s2"> ORDER BY n_players DESC;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT personId, temporaryDisplayName FROM players LIMIT 10&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<span class="n">right_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;SELECT personId, ppg FROM careerSummaries ORDER BY ppg DESC LIMIT 10&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left_df</span><span class="p">,</span> <span class="n">right_df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;personId&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;personId&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14107,40 +14410,71 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>country</th>
-      <th>n_players</th>
+      <th>personId</th>
+      <th>temporaryDisplayName</th>
+      <th>ppg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>USA</td>
-      <td>384</td>
+      <td>2544</td>
+      <td>James, LeBron</td>
+      <td>27.1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Canada</td>
-      <td>20</td>
+      <td>2546</td>
+      <td>Anthony, Carmelo</td>
+      <td>23.6</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>France</td>
-      <td>11</td>
+      <td>201142</td>
+      <td>NaN</td>
+      <td>27.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Australia</td>
-      <td>8</td>
+      <td>201935</td>
+      <td>NaN</td>
+      <td>25.1</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Croatia</td>
-      <td>6</td>
+      <td>1629029</td>
+      <td>NaN</td>
+      <td>24.4</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Serbia</td>
-      <td>6</td>
+      <td>203954</td>
+      <td>NaN</td>
+      <td>24.1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>203076</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>203081</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1629027</td>
+      <td>NaN</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1629627</td>
+      <td>NaN</td>
+      <td>23.6</td>
     </tr>
   </tbody>
 </table>
@@ -14153,20 +14487,19 @@ a.anchor-link {
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20197;-Python-pandas-&#31034;&#31684;-FULL-OUTER-JOIN">&#20197; Python pandas &#31034;&#31684; <code>FULL OUTER JOIN</code><a class="anchor-link" href="#&#20197;-Python-pandas-&#31034;&#31684;-FULL-OUTER-JOIN">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT pos,</span>
-<span class="s2">       ROUND(AVG(heightMeters), 2) AS avgHeightMeters</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY pos</span>
-<span class="s2">HAVING avgHeightMeters &gt; 2</span>
-<span class="s2"> ORDER BY avgHeightMeters, pos;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left_df</span><span class="p">,</span> <span class="n">right_df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;personId&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;personId&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;outer&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14202,30 +14535,119 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>pos</th>
-      <th>avgHeightMeters</th>
+      <th>personId</th>
+      <th>temporaryDisplayName</th>
+      <th>ppg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>F</td>
-      <td>2.03</td>
+      <td>1713</td>
+      <td>Carter, Vince</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>F-C</td>
-      <td>2.09</td>
+      <td>2199</td>
+      <td>Chandler, Tyson</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>C-F</td>
-      <td>2.10</td>
+      <td>2544</td>
+      <td>James, LeBron</td>
+      <td>27.1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>C</td>
-      <td>2.12</td>
+      <td>2546</td>
+      <td>Anthony, Carmelo</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2594</td>
+      <td>Korver, Kyle</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2617</td>
+      <td>Haslem, Udonis</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2730</td>
+      <td>Howard, Dwight</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2738</td>
+      <td>Iguodala, Andre</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2747</td>
+      <td>Smith, JR</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2772</td>
+      <td>Ariza, Trevor</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>201142</td>
+      <td>NaN</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>201935</td>
+      <td>NaN</td>
+      <td>25.1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>1629029</td>
+      <td>NaN</td>
+      <td>24.4</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>203954</td>
+      <td>NaN</td>
+      <td>24.1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>203076</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>203081</td>
+      <td>NaN</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>1629027</td>
+      <td>NaN</td>
+      <td>23.6</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>1629627</td>
+      <td>NaN</td>
+      <td>23.6</td>
     </tr>
   </tbody>
 </table>
@@ -14237,211 +14659,47 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36914;&#38542;&#30340;-SQL-&#26597;&#35426;&#25216;&#24039;">&#36914;&#38542;&#30340; SQL &#26597;&#35426;&#25216;&#24039;<a class="anchor-link" href="#&#36914;&#38542;&#30340;-SQL-&#26597;&#35426;&#25216;&#24039;">&#182;</a></h2>
-</div>
-</div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;-CASE-&#28858;&#36039;&#26009;&#37325;&#26032;&#27512;&#39006;">&#20351;&#29992; <code>CASE</code> &#28858;&#36039;&#26009;&#37325;&#26032;&#27512;&#39006;<a class="anchor-link" href="#&#20351;&#29992;-CASE-&#28858;&#36039;&#26009;&#37325;&#26032;&#27512;&#39006;">&#182;</a></h2><p>使用條件敘述作重新歸類的依據。</p>
-<div class="highlight"><pre><span></span><span class="k">CASE</span> <span class="k">WHEN</span> <span class="n">condition</span> <span class="k">THEN</span> <span class="k">result</span>
-     <span class="k">WHEN</span> <span class="n">another_condition</span> <span class="k">THEN</span> <span class="k">result</span>
-     <span class="k">ELSE</span> <span class="k">result</span>
-<span class="k">END</span> <span class="k">AS</span> <span class="n">variable_name</span>
-</pre></div>
-
+<h2 id="&#20351;&#29992;-IS-NULL-&#25214;&#20986;&#26377;&#36986;&#28431;&#30340;&#35264;&#28204;&#20540;">&#20351;&#29992; <code>IS NULL</code> &#25214;&#20986;&#26377;&#36986;&#28431;&#30340;&#35264;&#28204;&#20540;<a class="anchor-link" href="#&#20351;&#29992;-IS-NULL-&#25214;&#20986;&#26377;&#36986;&#28431;&#30340;&#35264;&#28204;&#20540;">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="CASE-&#30340;&#19981;&#21516;&#29992;&#27861;"><code>CASE</code> &#30340;&#19981;&#21516;&#29992;&#27861;<a class="anchor-link" href="#CASE-&#30340;&#19981;&#21516;&#29992;&#27861;">&#182;</a></h2><ul>
-<li>將數值歸類成文字</li>
-<li>將細項歸類成大項</li>
-</ul>
-
 </div>
-</div>
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT firstName,</span>
-<span class="s2">       lastName,</span>
-<span class="s2">       heightMeters,</span>
-<span class="s2">       CASE WHEN heightMeters &gt;= 2 THEN &#39;Taller than 2 m&#39;</span>
-<span class="s2">            ELSE &#39;Shorter than 2 m&#39;</span>
-<span class="s2">       END AS heightCategory</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> LIMIT 10;</span>
+<span class="s2">SELECT veteran_players.personId,</span>
+<span class="s2">       veteran_players.temporaryDisplayName</span>
+<span class="s2">  FROM (SELECT personId,</span>
+<span class="s2">               temporaryDisplayName</span>
+<span class="s2">          FROM players</span>
+<span class="s2">         LIMIT 10) AS veteran_players</span>
+<span class="s2">  LEFT JOIN (SELECT personId,</span>
+<span class="s2">                    ppg</span>
+<span class="s2">               FROM careerSummaries</span>
+<span class="s2">              ORDER BY ppg DESC</span>
+<span class="s2">              LIMIT 10) AS top_scorers</span>
+<span class="s2">    ON veteran_players.personId = top_scorers.personId</span>
+<span class="s2"> WHERE top_scorers.ppg IS NULL;</span>
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
-      <th>heightMeters</th>
-      <th>heightCategory</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Vince</td>
-      <td>Carter</td>
-      <td>1.98</td>
-      <td>Shorter than 2 m</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Tyson</td>
-      <td>Chandler</td>
-      <td>2.13</td>
-      <td>Taller than 2 m</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>LeBron</td>
-      <td>James</td>
-      <td>2.06</td>
-      <td>Taller than 2 m</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Carmelo</td>
-      <td>Anthony</td>
-      <td>2.03</td>
-      <td>Taller than 2 m</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Kyle</td>
-      <td>Korver</td>
-      <td>2.01</td>
-      <td>Taller than 2 m</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Udonis</td>
-      <td>Haslem</td>
-      <td>2.03</td>
-      <td>Taller than 2 m</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Dwight</td>
-      <td>Howard</td>
-      <td>2.08</td>
-      <td>Taller than 2 m</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Andre</td>
-      <td>Iguodala</td>
-      <td>1.98</td>
-      <td>Shorter than 2 m</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>JR</td>
-      <td>Smith</td>
-      <td>1.98</td>
-      <td>Shorter than 2 m</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Trevor</td>
-      <td>Ariza</td>
-      <td>2.03</td>
-      <td>Taller than 2 m</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#32048;&#38917;&#27512;&#39006;&#25104;&#22823;&#38917;&#30340;&#26681;&#25818;">&#32048;&#38917;&#27512;&#39006;&#25104;&#22823;&#38917;&#30340;&#26681;&#25818;<a class="anchor-link" href="#&#32048;&#38917;&#27512;&#39006;&#25104;&#22823;&#38917;&#30340;&#26681;&#25818;">&#182;</a></h2><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s1">&#39;G-F&#39;</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;F-G&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;F-C&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;C-F&#39;</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="s1">&#39;C&#39;</span>
-<span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT firstName,</span>
-<span class="s2">       lastName,</span>
-<span class="s2">       pos,</span>
-<span class="s2">       CASE WHEN pos IN (&#39;G-F&#39;, &#39;G&#39;) THEN &#39;G&#39;</span>
-<span class="s2">            WHEN pos IN (&#39;C-F&#39;, &#39;C&#39;) THEN &#39;C&#39;</span>
-<span class="s2">            ELSE &#39;F&#39;</span>
-<span class="s2">       END AS posNew</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> LIMIT 10;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14477,82 +14735,50 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
-      <th>pos</th>
-      <th>posNew</th>
+      <th>personId</th>
+      <th>temporaryDisplayName</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Vince</td>
-      <td>Carter</td>
-      <td>G-F</td>
-      <td>G</td>
+      <td>1713</td>
+      <td>Carter, Vince</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Tyson</td>
-      <td>Chandler</td>
-      <td>C</td>
-      <td>C</td>
+      <td>2199</td>
+      <td>Chandler, Tyson</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>LeBron</td>
-      <td>James</td>
-      <td>F</td>
-      <td>F</td>
+      <td>2594</td>
+      <td>Korver, Kyle</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Carmelo</td>
-      <td>Anthony</td>
-      <td>F</td>
-      <td>F</td>
+      <td>2617</td>
+      <td>Haslem, Udonis</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Kyle</td>
-      <td>Korver</td>
-      <td>G-F</td>
-      <td>G</td>
+      <td>2730</td>
+      <td>Howard, Dwight</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>Udonis</td>
-      <td>Haslem</td>
-      <td>F</td>
-      <td>F</td>
+      <td>2738</td>
+      <td>Iguodala, Andre</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>Dwight</td>
-      <td>Howard</td>
-      <td>C-F</td>
-      <td>C</td>
+      <td>2747</td>
+      <td>Smith, JR</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>Andre</td>
-      <td>Iguodala</td>
-      <td>G-F</td>
-      <td>G</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>JR</td>
-      <td>Smith</td>
-      <td>G</td>
-      <td>G</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Trevor</td>
-      <td>Ariza</td>
-      <td>F</td>
-      <td>F</td>
+      <td>2772</td>
+      <td>Ariza, Trevor</td>
     </tr>
   </tbody>
 </table>
@@ -14568,83 +14794,29 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;&#23376;&#26597;&#35426;">&#20351;&#29992;&#23376;&#26597;&#35426;<a class="anchor-link" href="#&#20351;&#29992;&#23376;&#26597;&#35426;">&#182;</a></h2><p>子查詢指的是在一段查詢語法之中嵌入另一段需要先執行的查詢語法，將子查詢擺放至小括號之中並且加上縮排。</p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#30446;&#21069;&#35504;&#26159;&#29983;&#28079;&#32317;&#24471;&#20998;&#26368;&#39640;&#30340;&#29699;&#21729;">&#30446;&#21069;&#35504;&#26159;&#29983;&#28079;&#32317;&#24471;&#20998;&#26368;&#39640;&#30340;&#29699;&#21729;<a class="anchor-link" href="#&#30446;&#21069;&#35504;&#26159;&#29983;&#28079;&#32317;&#24471;&#20998;&#26368;&#39640;&#30340;&#29699;&#21729;">&#182;</a></h2><ul>
-<li>首先要從 <code>careerSummaries</code> 著手</li>
-<li>接著利用在前一個查詢獲得的 <code>MAX(points)</code> 對 <code>careerSummaries</code> 進行篩選</li>
-<li>最後是利用前一個查詢獲得的 <code>personId</code> 對 <code>players</code> 進行篩選</li>
+<h2 id="&#38364;&#32879;&#24335;&#27169;&#22411;&#23450;&#32681;&#20102;&#34920;&#26684;&#38291;&#30340;&#38364;&#20418;">&#38364;&#32879;&#24335;&#27169;&#22411;&#23450;&#32681;&#20102;&#34920;&#26684;&#38291;&#30340;&#38364;&#20418;<a class="anchor-link" href="#&#38364;&#32879;&#24335;&#27169;&#22411;&#23450;&#32681;&#20102;&#34920;&#26684;&#38291;&#30340;&#38364;&#20418;">&#182;</a></h2><ul>
+<li>一對一</li>
+<li>一對多</li>
+<li>多對多</li>
 </ul>
 
 </div>
 </div>
-</div></section><section>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT MAX(points)</span>
-<span class="s2">  FROM careerSummaries;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">  FROM players</span>
+<span class="s2">  JOIN careerSummaries</span>
+<span class="s2">    ON players.personId = careerSummaries.personId;</span>
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>MAX(points)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>34087</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -14654,12 +14826,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT personId</span>
-<span class="s2">  FROM careerSummaries</span>
-<span class="s2"> WHERE points = 34087;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14695,16 +14862,297 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>temporaryDisplayName</th>
       <th>personId</th>
+      <th>teamId</th>
+      <th>jersey</th>
+      <th>isActive</th>
+      <th>pos</th>
+      <th>heightFeet</th>
+      <th>heightInches</th>
+      <th>...</th>
+      <th>ftm</th>
+      <th>fta</th>
+      <th>pFouls</th>
+      <th>points</th>
+      <th>gamesPlayed</th>
+      <th>gamesStarted</th>
+      <th>plusMinus</th>
+      <th>min</th>
+      <th>dd2</th>
+      <th>td3</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>Vince</td>
+      <td>Carter</td>
+      <td>Carter, Vince</td>
+      <td>1713</td>
+      <td>1610612737</td>
+      <td>15.0</td>
+      <td>True</td>
+      <td>G-F</td>
+      <td>6</td>
+      <td>6</td>
+      <td>...</td>
+      <td>4852.0</td>
+      <td>6082.0</td>
+      <td>3995.0</td>
+      <td>25728.0</td>
+      <td>1541.0</td>
+      <td>982.0</td>
+      <td>1816.0</td>
+      <td>46371.0</td>
+      <td>90.0</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Tyson</td>
+      <td>Chandler</td>
+      <td>Chandler, Tyson</td>
+      <td>2199</td>
+      <td>1610612745</td>
+      <td>19.0</td>
+      <td>True</td>
+      <td>C</td>
+      <td>7</td>
+      <td>0</td>
+      <td>...</td>
+      <td>2393.0</td>
+      <td>3714.0</td>
+      <td>3268.0</td>
+      <td>9509.0</td>
+      <td>1160.0</td>
+      <td>886.0</td>
+      <td>325.0</td>
+      <td>31617.0</td>
+      <td>292.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LeBron</td>
+      <td>James</td>
+      <td>James, LeBron</td>
       <td>2544</td>
+      <td>1610612747</td>
+      <td>23.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>9</td>
+      <td>...</td>
+      <td>7379.0</td>
+      <td>10044.0</td>
+      <td>2313.0</td>
+      <td>34087.0</td>
+      <td>1258.0</td>
+      <td>1257.0</td>
+      <td>6887.0</td>
+      <td>48327.0</td>
+      <td>485.0</td>
+      <td>94.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Carmelo</td>
+      <td>Anthony</td>
+      <td>Anthony, Carmelo</td>
+      <td>2546</td>
+      <td>1610612757</td>
+      <td>0.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>8</td>
+      <td>...</td>
+      <td>6028.0</td>
+      <td>7424.0</td>
+      <td>3204.0</td>
+      <td>26314.0</td>
+      <td>1114.0</td>
+      <td>1106.0</td>
+      <td>1614.0</td>
+      <td>39750.0</td>
+      <td>171.0</td>
+      <td>2.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Kyle</td>
+      <td>Korver</td>
+      <td>Korver, Kyle</td>
+      <td>2594</td>
+      <td>1610612749</td>
+      <td>26.0</td>
+      <td>True</td>
+      <td>G-F</td>
+      <td>6</td>
+      <td>7</td>
+      <td>...</td>
+      <td>1290.0</td>
+      <td>1472.0</td>
+      <td>2512.0</td>
+      <td>11903.0</td>
+      <td>1224.0</td>
+      <td>422.0</td>
+      <td>2885.0</td>
+      <td>31056.0</td>
+      <td>7.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>Matt</td>
+      <td>Thomas</td>
+      <td>Thomas, Matt</td>
+      <td>1629744</td>
+      <td>1610612761</td>
+      <td>21.0</td>
+      <td>True</td>
+      <td>G</td>
+      <td>6</td>
+      <td>4</td>
+      <td>...</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>31.0</td>
+      <td>150.0</td>
+      <td>33.0</td>
+      <td>0.0</td>
+      <td>22.0</td>
+      <td>321.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>500</th>
+      <td>Tariq</td>
+      <td>Owens</td>
+      <td>Owens, Tariq</td>
+      <td>1629745</td>
+      <td>1610612756</td>
+      <td>41.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>10</td>
+      <td>...</td>
+      <td>2.0</td>
+      <td>2.0</td>
+      <td>1.0</td>
+      <td>4.0</td>
+      <td>3.0</td>
+      <td>0.0</td>
+      <td>-16.0</td>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>501</th>
+      <td>Javonte</td>
+      <td>Green</td>
+      <td>Green, Javonte</td>
+      <td>1629750</td>
+      <td>1610612738</td>
+      <td>43.0</td>
+      <td>True</td>
+      <td>G-F</td>
+      <td>6</td>
+      <td>4</td>
+      <td>...</td>
+      <td>23.0</td>
+      <td>36.0</td>
+      <td>37.0</td>
+      <td>127.0</td>
+      <td>44.0</td>
+      <td>1.0</td>
+      <td>-5.0</td>
+      <td>414.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>502</th>
+      <td>Juwan</td>
+      <td>Morgan</td>
+      <td>Morgan, Juwan</td>
+      <td>1629752</td>
+      <td>1610612762</td>
+      <td>16.0</td>
+      <td>True</td>
+      <td>F</td>
+      <td>6</td>
+      <td>7</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>19.0</td>
+      <td>16.0</td>
+      <td>0.0</td>
+      <td>19.0</td>
+      <td>73.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>503</th>
+      <td>Matt</td>
+      <td>Mooney</td>
+      <td>Mooney, Matt</td>
+      <td>1629760</td>
+      <td>1610612739</td>
+      <td>31.0</td>
+      <td>True</td>
+      <td>G</td>
+      <td>6</td>
+      <td>2</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>2.0</td>
+      <td>4.0</td>
+      <td>0.0</td>
+      <td>7.0</td>
+      <td>18.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
   </tbody>
 </table>
+<p>504 rows × 51 columns</p>
 </div>
 </div>
 
@@ -14720,10 +15168,10 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT firstName,</span>
-<span class="s2">       lastName</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> WHERE personId = 2544;</span>
+<span class="s2">SELECT *</span>
+<span class="s2">  FROM teams</span>
+<span class="s2">  JOIN rosters</span>
+<span class="s2">    ON teams.teamId = rosters.teamId;</span>
 <span class="s2">&quot;&quot;&quot;</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
@@ -14761,93 +15209,213 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
+      <th>isNBAFranchise</th>
+      <th>isAllStar</th>
+      <th>city</th>
+      <th>altCityName</th>
+      <th>fullName</th>
+      <th>tricode</th>
+      <th>teamId</th>
+      <th>nickname</th>
+      <th>urlName</th>
+      <th>teamShortName</th>
+      <th>confName</th>
+      <th>divName</th>
+      <th>personId</th>
+      <th>teamId</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>LeBron</td>
-      <td>James</td>
+      <td>True</td>
+      <td>False</td>
+      <td>Atlanta</td>
+      <td>Atlanta</td>
+      <td>Atlanta Hawks</td>
+      <td>ATL</td>
+      <td>1610612737</td>
+      <td>Hawks</td>
+      <td>hawks</td>
+      <td>Atlanta</td>
+      <td>East</td>
+      <td>Southeast</td>
+      <td>1713</td>
+      <td>1610612737</td>
     </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT firstName,</span>
-<span class="s2">       lastName</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> WHERE personId = (</span>
-<span class="s2">           SELECT personId</span>
-<span class="s2">             FROM careerSummaries</span>
-<span class="s2">            WHERE points = (</span>
-<span class="s2">                SELECT MAX(points)</span>
-<span class="s2">                  FROM careerSummaries</span>
-<span class="s2">            )</span>
-<span class="s2">       );</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
-      <th>0</th>
-      <td>LeBron</td>
-      <td>James</td>
+      <th>1</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Houston</td>
+      <td>Houston</td>
+      <td>Houston Rockets</td>
+      <td>HOU</td>
+      <td>1610612745</td>
+      <td>Rockets</td>
+      <td>rockets</td>
+      <td>Houston</td>
+      <td>West</td>
+      <td>Southwest</td>
+      <td>2199</td>
+      <td>1610612745</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Los Angeles</td>
+      <td>Los Angeles Lakers</td>
+      <td>Los Angeles Lakers</td>
+      <td>LAL</td>
+      <td>1610612747</td>
+      <td>Lakers</td>
+      <td>lakers</td>
+      <td>L.A. Lakers</td>
+      <td>West</td>
+      <td>Pacific</td>
+      <td>2544</td>
+      <td>1610612747</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Portland</td>
+      <td>Portland</td>
+      <td>Portland Trail Blazers</td>
+      <td>POR</td>
+      <td>1610612757</td>
+      <td>Trail Blazers</td>
+      <td>blazers</td>
+      <td>Portland</td>
+      <td>West</td>
+      <td>Northwest</td>
+      <td>2546</td>
+      <td>1610612757</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Milwaukee</td>
+      <td>Milwaukee</td>
+      <td>Milwaukee Bucks</td>
+      <td>MIL</td>
+      <td>1610612749</td>
+      <td>Bucks</td>
+      <td>bucks</td>
+      <td>Milwaukee</td>
+      <td>East</td>
+      <td>Central</td>
+      <td>2594</td>
+      <td>1610612749</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>499</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Toronto</td>
+      <td>Toronto</td>
+      <td>Toronto Raptors</td>
+      <td>TOR</td>
+      <td>1610612761</td>
+      <td>Raptors</td>
+      <td>raptors</td>
+      <td>Toronto</td>
+      <td>East</td>
+      <td>Atlantic</td>
+      <td>1629744</td>
+      <td>1610612761</td>
+    </tr>
+    <tr>
+      <th>500</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Phoenix</td>
+      <td>Phoenix</td>
+      <td>Phoenix Suns</td>
+      <td>PHX</td>
+      <td>1610612756</td>
+      <td>Suns</td>
+      <td>suns</td>
+      <td>Phoenix</td>
+      <td>West</td>
+      <td>Pacific</td>
+      <td>1629745</td>
+      <td>1610612756</td>
+    </tr>
+    <tr>
+      <th>501</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Boston</td>
+      <td>Boston</td>
+      <td>Boston Celtics</td>
+      <td>BOS</td>
+      <td>1610612738</td>
+      <td>Celtics</td>
+      <td>celtics</td>
+      <td>Boston</td>
+      <td>East</td>
+      <td>Atlantic</td>
+      <td>1629750</td>
+      <td>1610612738</td>
+    </tr>
+    <tr>
+      <th>502</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Utah</td>
+      <td>Utah</td>
+      <td>Utah Jazz</td>
+      <td>UTA</td>
+      <td>1610612762</td>
+      <td>Jazz</td>
+      <td>jazz</td>
+      <td>Utah</td>
+      <td>West</td>
+      <td>Northwest</td>
+      <td>1629752</td>
+      <td>1610612762</td>
+    </tr>
+    <tr>
+      <th>503</th>
+      <td>True</td>
+      <td>False</td>
+      <td>Cleveland</td>
+      <td>Cleveland</td>
+      <td>Cleveland Cavaliers</td>
+      <td>CLE</td>
+      <td>1610612739</td>
+      <td>Cavaliers</td>
+      <td>cavaliers</td>
+      <td>Cleveland</td>
+      <td>East</td>
+      <td>Central</td>
+      <td>1629760</td>
+      <td>1610612739</td>
     </tr>
   </tbody>
 </table>
+<p>504 rows × 14 columns</p>
 </div>
 </div>
 
@@ -14860,26 +15428,54 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#30446;&#21069;&#28246;&#20154;&#38538;&#30340;&#29699;&#21729;&#38499;&#23481;&#26377;&#35504;">&#30446;&#21069;&#28246;&#20154;&#38538;&#30340;&#29699;&#21729;&#38499;&#23481;&#26377;&#35504;<a class="anchor-link" href="#&#30446;&#21069;&#28246;&#20154;&#38538;&#30340;&#29699;&#21729;&#38499;&#23481;&#26377;&#35504;">&#182;</a></h2><ul>
-<li>首先要從 <code>teams</code> 著手</li>
-<li>接著利用在前一個查詢獲得的 <code>teamId</code> 對 <code>rosters</code> 進行篩選</li>
-<li>最後是利用前一個查詢獲得的 <code>personId</code> 對 <code>players</code> 進行篩選</li>
-</ul>
+<h2 id="&#34920;&#26684;&#32879;&#32080;&#23601;&#22914;&#21516;&#27700;&#24179;&#21512;&#20341;">&#34920;&#26684;&#32879;&#32080;&#23601;&#22914;&#21516;&#27700;&#24179;&#21512;&#20341;<a class="anchor-link" href="#&#34920;&#26684;&#32879;&#32080;&#23601;&#22914;&#21516;&#27700;&#24179;&#21512;&#20341;">&#182;</a></h2><p><img src="https://i.imgur.com/hq7fS67.png" alt="Imgur"></p>
+<p>Source: <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html">Pandas User Guide</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#20063;&#33021;&#36879;&#36942;-UNION-&#22402;&#30452;&#21512;&#20341;&#34920;&#26684;">&#20063;&#33021;&#36879;&#36942; <code>UNION</code> &#22402;&#30452;&#21512;&#20341;&#34920;&#26684;<a class="anchor-link" href="#&#20063;&#33021;&#36879;&#36942;-UNION-&#22402;&#30452;&#21512;&#20341;&#34920;&#26684;">&#182;</a></h2><p><img src="https://i.imgur.com/B7xawvp.png" alt="Imgur"></p>
+<p>Source: <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html">Pandas User Guide</a></p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT teamId</span>
-<span class="s2">    FROM teams</span>
-<span class="s2">    WHERE nickname = &#39;Lakers&#39;;</span>
+<span class="s2">SELECT firstName,</span>
+<span class="s2">       lastName,</span>
+<span class="s2">       &#39;height&#39; AS category,</span>
+<span class="s2">       heightmeters AS value</span>
+<span class="s2">  FROM players</span>
+<span class="s2"> WHERE firstName = &#39;LeBron&#39;</span>
+<span class="s2"> UNION</span>
+<span class="s2">SELECT firstName,</span>
+<span class="s2">       lastName,</span>
+<span class="s2">       &#39;weight&#39; AS category,</span>
+<span class="s2">       weightKilograms AS value</span>
+<span class="s2">  FROM players</span>
+<span class="s2"> WHERE firstName = &#39;LeBron&#39;;</span>
 <span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14915,146 +15511,26 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>teamId</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>category</th>
+      <th>value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1610612747</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT personId</span>
-<span class="s2">  FROM rosters</span>
-<span class="s2"> WHERE teamId = 1610612747;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>personId</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2544</td>
+      <td>LeBron</td>
+      <td>James</td>
+      <td>height</td>
+      <td>2.06</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2730</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2747</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>200765</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>201162</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>201580</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>201980</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>202340</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>202693</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>203076</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>203079</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>203484</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>1626188</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>1627936</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>1628398</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>1628961</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>1629659</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>1629719</td>
+      <td>LeBron</td>
+      <td>James</td>
+      <td>weight</td>
+      <td>113.40</td>
     </tr>
   </tbody>
 </table>
@@ -15067,24 +15543,46 @@ a.anchor-link {
 </div>
 
 </div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;<a class="anchor-link" href="#&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#182;</a></h2><p>使用 SQL 語法時，保留字順序必須要遵守。</p>
+<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">CAST</span><span class="p">(</span><span class="k">column_name</span> <span class="k">AS</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">AS</span> <span class="n">alias_name</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">JOIN</span> <span class="k">table_name</span>
+    <span class="k">ON</span> <span class="k">table_name</span><span class="p">.</span><span class="n">pk</span> <span class="o">=</span> <span class="k">table_name</span><span class="p">.</span><span class="n">fk</span>
+ <span class="k">WHERE</span> <span class="n">conditions</span>
+ <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
+<span class="k">HAVING</span> <span class="n">conditions</span>
+ <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span> <span class="k">DESC</span>
+ <span class="k">LIMIT</span> <span class="n">n_obs</span>
+ <span class="k">UNION</span><span class="p">;</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/datainpoint/classroom-introduction-to-sql/master?filepath=04-exercises.ipynb">聯結表格：隨堂練習</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#23559;-presidential2016-&#33287;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#25976;&#20197;-UNION-&#22402;&#30452;&#21512;&#20341;&#65292;&#21109;&#24314;-year-&#35722;&#25976;&#21312;&#20998;-number&#12289;candidates-&#33287;-total_votes">&#38568;&#22530;&#32244;&#32722;&#65306;&#23559; <code>presidential2016</code> &#33287; <code>presidential2020</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#25976;&#20197; <code>UNION</code> &#22402;&#30452;&#21512;&#20341;&#65292;&#21109;&#24314; <code>year</code> &#35722;&#25976;&#21312;&#20998; <code>number</code>&#12289;<code>candidates</code> &#33287; <code>total_votes</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#23559;-presidential2016-&#33287;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#25976;&#20197;-UNION-&#22402;&#30452;&#21512;&#20341;&#65292;&#21109;&#24314;-year-&#35722;&#25976;&#21312;&#20998;-number&#12289;candidates-&#33287;-total_votes">&#182;</a></h2>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT firstName,</span>
-<span class="s2">       lastName</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> WHERE personId IN (</span>
-<span class="s2">           SELECT personId</span>
-<span class="s2">             FROM rosters</span>
-<span class="s2">            WHERE teamId = (SELECT teamId</span>
-<span class="s2">                              FROM teams</span>
-<span class="s2">                             WHERE nickname = &#39;Lakers&#39;)</span>
-<span class="s2">       );</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
 </pre></div>
 
     </div>
@@ -15120,100 +15618,54 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
+      <th>year</th>
+      <th>number</th>
+      <th>candidates</th>
+      <th>total_votes</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>LeBron</td>
-      <td>James</td>
+      <td>2016</td>
+      <td>1</td>
+      <td>朱立倫/王如玄</td>
+      <td>3813365</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Dwight</td>
-      <td>Howard</td>
+      <td>2016</td>
+      <td>2</td>
+      <td>蔡英文/陳建仁</td>
+      <td>6894744</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>JR</td>
-      <td>Smith</td>
+      <td>2016</td>
+      <td>3</td>
+      <td>宋楚瑜/徐欣瑩</td>
+      <td>1576861</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Rajon</td>
-      <td>Rondo</td>
+      <td>2020</td>
+      <td>1</td>
+      <td>宋楚瑜/余湘</td>
+      <td>608590</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Jared</td>
-      <td>Dudley</td>
+      <td>2020</td>
+      <td>2</td>
+      <td>韓國瑜/張善政</td>
+      <td>5522119</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>JaVale</td>
-      <td>McGee</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Danny</td>
-      <td>Green</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Avery</td>
-      <td>Bradley</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Markieff</td>
-      <td>Morris</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Anthony</td>
-      <td>Davis</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Dion</td>
-      <td>Waiters</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Kentavious</td>
-      <td>Caldwell-Pope</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>Quinn</td>
-      <td>Cook</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Alex</td>
-      <td>Caruso</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Kyle</td>
-      <td>Kuzma</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Kostas</td>
-      <td>Antetokounmpo</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Talen</td>
-      <td>Horton-Tucker</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>Devontae</td>
-      <td>Cacok</td>
+      <td>2020</td>
+      <td>3</td>
+      <td>蔡英文/賴清德</td>
+      <td>8170231</td>
     </tr>
   </tbody>
 </table>
@@ -15229,93 +15681,16 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#20351;&#29992;&#23376;&#26597;&#35426;&#20358;&#29983;&#25104;&#26032;&#27396;&#20301;">&#20351;&#29992;&#23376;&#26597;&#35426;&#20358;&#29983;&#25104;&#26032;&#27396;&#20301;<a class="anchor-link" href="#&#20351;&#29992;&#23376;&#26597;&#35426;&#20358;&#29983;&#25104;&#26032;&#27396;&#20301;">&#182;</a></h2><p>依據鋒衛暸解 NBA 球員的組成：</p>
-<ul>
-<li>首先要從 <code>players</code> 著手</li>
-<li>接著利用在前一個查詢獲得的 <code>pos</code> 對 <code>players</code> 進行聚合</li>
-<li>最後是利用前一個查詢獲得的 <code>n_players</code> 計算百分比</li>
-</ul>
-
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#23559;-presidential2016-&#33287;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#20197;-UNION-&#22402;&#30452;&#21512;&#20341;&#65292;&#21109;&#24314;-year-&#35722;&#25976;&#21312;&#20998;-number&#12289;candidates-&#33287;-votes_percentage">&#38568;&#22530;&#32244;&#32722;&#65306;&#23559; <code>presidential2016</code> &#33287; <code>presidential2020</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#20197; <code>UNION</code> &#22402;&#30452;&#21512;&#20341;&#65292;&#21109;&#24314; <code>year</code> &#35722;&#25976;&#21312;&#20998; <code>number</code>&#12289;<code>candidates</code> &#33287; <code>votes_percentage</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#23559;-presidential2016-&#33287;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#20197;-UNION-&#22402;&#30452;&#21512;&#20341;&#65292;&#21109;&#24314;-year-&#35722;&#25976;&#21312;&#20998;-number&#12289;candidates-&#33287;-votes_percentage">&#182;</a></h2>
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT COUNT(*)</span>
-<span class="s2">  FROM players;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
-</pre></div>
-
-    </div>
 </div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>COUNT(*)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>504</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT pos,</span>
-<span class="s2">       COUNT(*) player_count,</span>
-<span class="s2">       504 AS ttl_player</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY pos;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
 </pre></div>
 
     </div>
@@ -15351,53 +15726,54 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>pos</th>
-      <th>player_count</th>
-      <th>ttl_player</th>
+      <th>year</th>
+      <th>number</th>
+      <th>candidates</th>
+      <th>votes_percentage</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>C</td>
-      <td>33</td>
-      <td>504</td>
+      <td>2016</td>
+      <td>1</td>
+      <td>朱立倫/王如玄</td>
+      <td>0.310409</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>C-F</td>
-      <td>28</td>
-      <td>504</td>
+      <td>2016</td>
+      <td>2</td>
+      <td>蔡英文/陳建仁</td>
+      <td>0.561234</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>F</td>
-      <td>137</td>
-      <td>504</td>
+      <td>2016</td>
+      <td>3</td>
+      <td>宋楚瑜/徐欣瑩</td>
+      <td>0.128357</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>F-C</td>
-      <td>39</td>
-      <td>504</td>
+      <td>2020</td>
+      <td>1</td>
+      <td>宋楚瑜/余湘</td>
+      <td>0.042556</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>F-G</td>
-      <td>26</td>
-      <td>504</td>
+      <td>2020</td>
+      <td>2</td>
+      <td>韓國瑜/張善政</td>
+      <td>0.386137</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>G</td>
-      <td>176</td>
-      <td>504</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>G-F</td>
-      <td>65</td>
-      <td>504</td>
+      <td>2020</td>
+      <td>3</td>
+      <td>蔡英文/賴清德</td>
+      <td>0.571307</td>
     </tr>
   </tbody>
 </table>
@@ -15410,137 +15786,19 @@ a.anchor-link {
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT pos,</span>
-<span class="s2">       COUNT(*) player_count,</span>
-<span class="s2">       504 AS ttl_player,</span>
-<span class="s2">       CAST(COUNT(*) AS REAL) / CAST(504 AS REAL) AS ratio</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY pos;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#28246;&#20154;&#38538;&#65288;Los-Angeles-Lakers&#65289;&#30340;&#29699;&#21729;&#38499;&#23481;&#29983;&#28079;&#22580;&#22343;&#24471;&#20998;&#65288;ppg&#65289;&#12289;&#22580;&#22343;&#31811;&#26495;&#65288;rpg&#65289;&#33287;&#22580;&#22343;&#21161;&#25915;&#65288;apg&#65289;&#65292;&#36984;&#25799;-fullName&#12289;firstName&#12289;lastName&#12289;ppg&#12289;rpg&#12289;apg-&#20006;&#20197;-firstName-&#36958;&#22686;&#25490;&#24207;">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>nba.db</code> &#30446;&#21069;&#28246;&#20154;&#38538;&#65288;Los Angeles Lakers&#65289;&#30340;&#29699;&#21729;&#38499;&#23481;&#29983;&#28079;&#22580;&#22343;&#24471;&#20998;&#65288;<code>ppg</code>&#65289;&#12289;&#22580;&#22343;&#31811;&#26495;&#65288;<code>rpg</code>&#65289;&#33287;&#22580;&#22343;&#21161;&#25915;&#65288;<code>apg</code>&#65289;&#65292;&#36984;&#25799; <code>fullName</code>&#12289;<code>firstName</code>&#12289;<code>lastName</code>&#12289;<code>ppg</code>&#12289;<code>rpg</code>&#12289;<code>apg</code> &#20006;&#20197; <code>firstName</code> &#36958;&#22686;&#25490;&#24207;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#28246;&#20154;&#38538;&#65288;Los-Angeles-Lakers&#65289;&#30340;&#29699;&#21729;&#38499;&#23481;&#29983;&#28079;&#22580;&#22343;&#24471;&#20998;&#65288;ppg&#65289;&#12289;&#22580;&#22343;&#31811;&#26495;&#65288;rpg&#65289;&#33287;&#22580;&#22343;&#21161;&#25915;&#65288;apg&#65289;&#65292;&#36984;&#25799;-fullName&#12289;firstName&#12289;lastName&#12289;ppg&#12289;rpg&#12289;apg-&#20006;&#20197;-firstName-&#36958;&#22686;&#25490;&#24207;">&#182;</a></h2>
 </div>
 </div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pos</th>
-      <th>player_count</th>
-      <th>ttl_player</th>
-      <th>ratio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>C</td>
-      <td>33</td>
-      <td>504</td>
-      <td>0.065476</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>C-F</td>
-      <td>28</td>
-      <td>504</td>
-      <td>0.055556</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>F</td>
-      <td>137</td>
-      <td>504</td>
-      <td>0.271825</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>F-C</td>
-      <td>39</td>
-      <td>504</td>
-      <td>0.077381</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>F-G</td>
-      <td>26</td>
-      <td>504</td>
-      <td>0.051587</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>G</td>
-      <td>176</td>
-      <td>504</td>
-      <td>0.349206</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>G-F</td>
-      <td>65</td>
-      <td>504</td>
-      <td>0.128968</td>
-    </tr>
-  </tbody>
-</table>
 </div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sql_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">SELECT pos,</span>
-<span class="s2">       CAST(COUNT(*) AS REAL) / (</span>
-<span class="s2">           SELECT CAST(COUNT(*) AS REAL)</span>
-<span class="s2">             FROM players</span>
-<span class="s2">       ) AS ratio</span>
-<span class="s2">  FROM players</span>
-<span class="s2"> GROUP BY pos;</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">sql_query</span><span class="p">,</span> <span class="n">conn_nba</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
 </pre></div>
 
     </div>
@@ -15576,45 +15834,176 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>pos</th>
-      <th>ratio</th>
+      <th>fullName</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>ppg</th>
+      <th>rpg</th>
+      <th>apg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>C</td>
-      <td>0.065476</td>
+      <td>Los Angeles Lakers</td>
+      <td>Alex</td>
+      <td>Caruso</td>
+      <td>5.7</td>
+      <td>2.0</td>
+      <td>2.1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>C-F</td>
-      <td>0.055556</td>
+      <td>Los Angeles Lakers</td>
+      <td>Anthony</td>
+      <td>Davis</td>
+      <td>24.0</td>
+      <td>10.4</td>
+      <td>2.2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>F</td>
-      <td>0.271825</td>
+      <td>Los Angeles Lakers</td>
+      <td>Avery</td>
+      <td>Bradley</td>
+      <td>11.8</td>
+      <td>2.9</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>F-C</td>
-      <td>0.077381</td>
+      <td>Los Angeles Lakers</td>
+      <td>Danny</td>
+      <td>Green</td>
+      <td>8.9</td>
+      <td>3.5</td>
+      <td>1.6</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>F-G</td>
-      <td>0.051587</td>
+      <td>Los Angeles Lakers</td>
+      <td>Devontae</td>
+      <td>Cacok</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>G</td>
-      <td>0.349206</td>
+      <td>Los Angeles Lakers</td>
+      <td>Dion</td>
+      <td>Waiters</td>
+      <td>13.2</td>
+      <td>2.7</td>
+      <td>2.8</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>G-F</td>
-      <td>0.128968</td>
+      <td>Los Angeles Lakers</td>
+      <td>Dwight</td>
+      <td>Howard</td>
+      <td>16.8</td>
+      <td>12.3</td>
+      <td>1.4</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Los Angeles Lakers</td>
+      <td>JR</td>
+      <td>Smith</td>
+      <td>12.5</td>
+      <td>3.2</td>
+      <td>2.1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Los Angeles Lakers</td>
+      <td>JaVale</td>
+      <td>McGee</td>
+      <td>7.9</td>
+      <td>5.1</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Los Angeles Lakers</td>
+      <td>Jared</td>
+      <td>Dudley</td>
+      <td>7.5</td>
+      <td>3.2</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Los Angeles Lakers</td>
+      <td>Kentavious</td>
+      <td>Caldwell-Pope</td>
+      <td>11.6</td>
+      <td>3.2</td>
+      <td>1.6</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Los Angeles Lakers</td>
+      <td>Kostas</td>
+      <td>Antetokounmpo</td>
+      <td>0.4</td>
+      <td>0.4</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Los Angeles Lakers</td>
+      <td>Kyle</td>
+      <td>Kuzma</td>
+      <td>16.0</td>
+      <td>5.5</td>
+      <td>1.9</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Los Angeles Lakers</td>
+      <td>LeBron</td>
+      <td>James</td>
+      <td>27.1</td>
+      <td>7.4</td>
+      <td>7.4</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Los Angeles Lakers</td>
+      <td>Markieff</td>
+      <td>Morris</td>
+      <td>11.5</td>
+      <td>5.4</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Los Angeles Lakers</td>
+      <td>Quinn</td>
+      <td>Cook</td>
+      <td>6.8</td>
+      <td>1.8</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Los Angeles Lakers</td>
+      <td>Rajon</td>
+      <td>Rondo</td>
+      <td>10.2</td>
+      <td>4.7</td>
+      <td>8.3</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Los Angeles Lakers</td>
+      <td>Talen</td>
+      <td>Horton-Tucker</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
     </tr>
   </tbody>
 </table>
@@ -15630,31 +16019,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;<a class="anchor-link" href="#&#36889;&#26159;&#30446;&#21069;&#28085;&#33995;&#30340;&#26597;&#35426;&#20445;&#30041;&#23383;">&#182;</a></h2><p>使用 SQL 語法時，保留字順序必須要遵守。</p>
-<div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="k">CAST</span><span class="p">(</span><span class="k">column_name</span> <span class="k">AS</span> <span class="n">data_type</span><span class="p">)</span> <span class="k">AS</span> <span class="n">alias_name</span>
-  <span class="k">FROM</span> <span class="k">table_name</span>
- <span class="k">WHERE</span> <span class="n">conditions</span>
- <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span>
-<span class="k">HAVING</span> <span class="n">conditions</span>
- <span class="k">ORDER</span> <span class="k">BY</span> <span class="k">column_name</span> <span class="k">DESC</span>
- <span class="k">LIMIT</span> <span class="n">n_obs</span><span class="p">;</span>
-</pre></div>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/datainpoint/classroom-introduction-to-sql/master?filepath=03-exercises.ipynb">資料分析：隨堂練習</a></p>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-COUNT()-&#20989;&#24335;&#26597;&#35426;-teams-&#26296;&#35299;-NBA-&#26481;&#21312;&#65288;confName-=-'East'&#65289;&#20849;&#26377;&#24190;&#25903;&#29699;&#38538;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858;-n_teams">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>COUNT()</code> &#20989;&#24335;&#26597;&#35426; <code>teams</code> &#26296;&#35299; NBA &#26481;&#21312;&#65288;<code>confName = 'East'</code>&#65289;&#20849;&#26377;&#24190;&#25903;&#29699;&#38538;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858; <code>n_teams</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-COUNT()-&#20989;&#24335;&#26597;&#35426;-teams-&#26296;&#35299;-NBA-&#26481;&#21312;&#65288;confName-=-'East'&#65289;&#20849;&#26377;&#24190;&#25903;&#29699;&#38538;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858;-n_teams">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639;-presidential2020-&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#33287;&#34081;&#33521;&#25991;/&#36084;&#28165;&#24503;&#36889;&#20841;&#32068;&#20505;&#36984;&#20154;&#22312;&#33274;&#21271;&#24066;-12-&#20491;&#34892;&#25919;&#21312;&#20013;&#21508;&#33258;&#30340;&#24471;&#31080;&#25976;&#65292;&#36984;&#25799;-town&#12289;Kuo_Cheng-&#33287;-Ing_Te-&#19977;&#20491;&#35722;&#25976;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639; <code>presidential2020</code> &#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#33287;&#34081;&#33521;&#25991;/&#36084;&#28165;&#24503;&#36889;&#20841;&#32068;&#20505;&#36984;&#20154;&#22312;&#33274;&#21271;&#24066; 12 &#20491;&#34892;&#25919;&#21312;&#20013;&#21508;&#33258;&#30340;&#24471;&#31080;&#25976;&#65292;&#36984;&#25799; <code>town</code>&#12289;<code>Kuo_Cheng</code> &#33287; <code>Ing_Te</code> &#19977;&#20491;&#35722;&#25976;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639;-presidential2020-&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#33287;&#34081;&#33521;&#25991;/&#36084;&#28165;&#24503;&#36889;&#20841;&#32068;&#20505;&#36984;&#20154;&#22312;&#33274;&#21271;&#24066;-12-&#20491;&#34892;&#25919;&#21312;&#20013;&#21508;&#33258;&#30340;&#24471;&#31080;&#25976;&#65292;&#36984;&#25799;-town&#12289;Kuo_Cheng-&#33287;-Ing_Te-&#19977;&#20491;&#35722;&#25976;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15699,13 +16064,83 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>n_teams</th>
+      <th>town</th>
+      <th>Kuo_Cheng</th>
+      <th>Ing_Te</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>15</td>
+      <td>中山區</td>
+      <td>56491</td>
+      <td>79022</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>中正區</td>
+      <td>41461</td>
+      <td>48183</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>信義區</td>
+      <td>62353</td>
+      <td>70285</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>內湖區</td>
+      <td>74437</td>
+      <td>94269</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>北投區</td>
+      <td>59851</td>
+      <td>90060</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>南港區</td>
+      <td>30968</td>
+      <td>40969</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>士林區</td>
+      <td>65183</td>
+      <td>104881</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>大同區</td>
+      <td>24673</td>
+      <td>50006</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>大安區</td>
+      <td>85490</td>
+      <td>88977</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>文山區</td>
+      <td>82305</td>
+      <td>78129</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>松山區</td>
+      <td>55918</td>
+      <td>64207</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>萬華區</td>
+      <td>46700</td>
+      <td>66866</td>
     </tr>
   </tbody>
 </table>
@@ -15721,7 +16156,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-COUNT()-&#20989;&#24335;&#26597;&#35426;-teams-&#26296;&#35299;-NBA-&#35199;&#21312;&#65288;confName-=-'West'&#65289;&#20849;&#26377;&#24190;&#25903;&#29699;&#38538;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858;-n_teams">&#38568;&#22530;&#32244;&#32722;&#65306;&#20197; <code>COUNT()</code> &#20989;&#24335;&#26597;&#35426; <code>teams</code> &#26296;&#35299; NBA &#35199;&#21312;&#65288;<code>confName = 'West'</code>&#65289;&#20849;&#26377;&#24190;&#25903;&#29699;&#38538;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858; <code>n_teams</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20197;-COUNT()-&#20989;&#24335;&#26597;&#35426;-teams-&#26296;&#35299;-NBA-&#35199;&#21312;&#65288;confName-=-'West'&#65289;&#20849;&#26377;&#24190;&#25903;&#29699;&#38538;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858;-n_teams">&#182;</a></h2>
+<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639;-presidential2020-&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#33287;&#34081;&#33521;&#25991;/&#36084;&#28165;&#24503;&#36889;&#20841;&#32068;&#20505;&#36984;&#20154;&#22312;&#33274;&#21271;&#24066;-12-&#20491;&#34892;&#25919;&#21312;&#20013;&#21508;&#33258;&#30340;&#24471;&#31080;&#25976;&#65292;&#36984;&#25799;-town&#12289;Kuo_Cheng-&#33287;-Ing_Te-&#19977;&#20491;&#35722;&#25976;&#65292;&#20006;&#25214;&#20986;&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#22312;&#21738;&#20123;&#34892;&#25919;&#21312;&#24471;&#31080;&#25976;&#36611;&#22810;">&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639; <code>presidential2020</code> &#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#33287;&#34081;&#33521;&#25991;/&#36084;&#28165;&#24503;&#36889;&#20841;&#32068;&#20505;&#36984;&#20154;&#22312;&#33274;&#21271;&#24066; 12 &#20491;&#34892;&#25919;&#21312;&#20013;&#21508;&#33258;&#30340;&#24471;&#31080;&#25976;&#65292;&#36984;&#25799; <code>town</code>&#12289;<code>Kuo_Cheng</code> &#33287; <code>Ing_Te</code> &#19977;&#20491;&#35722;&#25976;&#65292;&#20006;&#25214;&#20986;&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#22312;&#21738;&#20123;&#34892;&#25919;&#21312;&#24471;&#31080;&#25976;&#36611;&#22810;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#35336;&#31639;-presidential2020-&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#33287;&#34081;&#33521;&#25991;/&#36084;&#28165;&#24503;&#36889;&#20841;&#32068;&#20505;&#36984;&#20154;&#22312;&#33274;&#21271;&#24066;-12-&#20491;&#34892;&#25919;&#21312;&#20013;&#21508;&#33258;&#30340;&#24471;&#31080;&#25976;&#65292;&#36984;&#25799;-town&#12289;Kuo_Cheng-&#33287;-Ing_Te-&#19977;&#20491;&#35722;&#25976;&#65292;&#20006;&#25214;&#20986;&#38867;&#22283;&#29788;/&#24373;&#21892;&#25919;&#22312;&#21738;&#20123;&#34892;&#25919;&#21312;&#24471;&#31080;&#25976;&#36611;&#22810;">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15766,1108 +16201,17 @@ a.anchor-link {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>n_teams</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>15</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-COUNT()-&#20989;&#24335;&#26597;&#35426;-presidential2020-&#26377;&#24190;&#20491;&#35264;&#28204;&#20540;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858;-n_obs">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>COUNT()</code> &#20989;&#24335;&#26597;&#35426; <code>presidential2020</code> &#26377;&#24190;&#20491;&#35264;&#28204;&#20540;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858; <code>n_obs</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-COUNT()-&#20989;&#24335;&#26597;&#35426;-presidential2020-&#26377;&#24190;&#20491;&#35264;&#28204;&#20540;&#65292;&#23559;&#31572;&#26696;&#21629;&#21517;&#28858;-n_obs">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[34]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>n_obs</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>51678</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-COUNT()-&#20989;&#24335;&#25645;&#37197;-PRAGMA_TABLE_INFO()-&#20989;&#24335;&#26597;&#35426;-presidential2020-&#26377;&#24190;&#20491;&#27396;&#20301;&#25976;&#65292;&#20006;&#21629;&#21517;&#28858;-n_cols">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>COUNT()</code> &#20989;&#24335;&#25645;&#37197; <code>PRAGMA_TABLE_INFO()</code> &#20989;&#24335;&#26597;&#35426; <code>presidential2020</code> &#26377;&#24190;&#20491;&#27396;&#20301;&#25976;&#65292;&#20006;&#21629;&#21517;&#28858; <code>n_cols</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-COUNT()-&#20989;&#24335;&#25645;&#37197;-PRAGMA_TABLE_INFO()-&#20989;&#24335;&#26597;&#35426;-presidential2020-&#26377;&#24190;&#20491;&#27396;&#20301;&#25976;&#65292;&#20006;&#21629;&#21517;&#28858;-n_cols">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[36]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>n_cols</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>7</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-careerSummaries-&#29983;&#28079;&#22580;&#22343;&#24471;&#20998;-ppg-&#36229;&#36942;-20-&#20998;&#30340;&#29699;&#21729;&#26377;&#24190;&#20301;&#65292;&#20006;&#21629;&#21517;&#28858;-n_players">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>careerSummaries</code> &#29983;&#28079;&#22580;&#22343;&#24471;&#20998; <code>ppg</code> &#36229;&#36942; 20 &#20998;&#30340;&#29699;&#21729;&#26377;&#24190;&#20301;&#65292;&#20006;&#21629;&#21517;&#28858; <code>n_players</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-careerSummaries-&#29983;&#28079;&#22580;&#22343;&#24471;&#20998;-ppg-&#36229;&#36942;-20-&#20998;&#30340;&#29699;&#21729;&#26377;&#24190;&#20301;&#65292;&#20006;&#21629;&#21517;&#28858;-n_players">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[38]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>n_players</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>18</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-SUM()-&#20989;&#24335;&#23559;-presidential2020-&#30340;&#31080;&#25976;&#21152;&#32317;&#65292;&#20006;&#21629;&#21517;&#28858;-total_votes">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>SUM()</code> &#20989;&#24335;&#23559; <code>presidential2020</code> &#30340;&#31080;&#25976;&#21152;&#32317;&#65292;&#20006;&#21629;&#21517;&#28858; <code>total_votes</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-SUM()-&#20989;&#24335;&#23559;-presidential2020-&#30340;&#31080;&#25976;&#21152;&#32317;&#65292;&#20006;&#21629;&#21517;&#28858;-total_votes">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[40]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>total_votes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>14300940</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-SUM()-&#20989;&#24335;&#33287;-GROUP-BY-&#23559;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#31080;&#25976;&#21152;&#32317;&#65292;&#20006;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-number&#12289;candidates-&#33287;-total_votes-&#36889;&#19977;&#20491;&#35722;&#25976;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>SUM()</code> &#20989;&#24335;&#33287; <code>GROUP BY</code> &#23559; <code>presidential2020</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#31080;&#25976;&#21152;&#32317;&#65292;&#20006;&#21629;&#21517;&#28858; <code>total_votes</code>&#65292;&#36984;&#25799; <code>number</code>&#12289;<code>candidates</code> &#33287; <code>total_votes</code> &#36889;&#19977;&#20491;&#35722;&#25976;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-SUM()-&#20989;&#24335;&#33287;-GROUP-BY-&#23559;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#31080;&#25976;&#21152;&#32317;&#65292;&#20006;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-number&#12289;candidates-&#33287;-total_votes-&#36889;&#19977;&#20491;&#35722;&#25976;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[42]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>candidates</th>
-      <th>total_votes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>宋楚瑜/余湘</td>
-      <td>608590</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>韓國瑜/張善政</td>
-      <td>5522119</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>蔡英文/賴清德</td>
-      <td>8170231</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-SUM()-&#20989;&#24335;&#12289;-GROUP-BY-&#33287;-HAVING-&#25214;&#20986;-presidential2020-&#33274;&#21271;&#24066;&#32317;&#31080;&#25976;&#36229;&#36942;-10-&#33836;&#30340;&#34892;&#25919;&#21312;&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-town-&#33287;-total_votes-&#36889;&#20841;&#20491;&#35722;&#25976;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>SUM()</code> &#20989;&#24335;&#12289; <code>GROUP BY</code> &#33287; <code>HAVING</code> &#25214;&#20986; <code>presidential2020</code> &#33274;&#21271;&#24066;&#32317;&#31080;&#25976;&#36229;&#36942; 10 &#33836;&#30340;&#34892;&#25919;&#21312;&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858; <code>total_votes</code>&#65292;&#36984;&#25799; <code>town</code> &#33287; <code>total_votes</code> &#36889;&#20841;&#20491;&#35722;&#25976;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-SUM()-&#20989;&#24335;&#12289;-GROUP-BY-&#33287;-HAVING-&#25214;&#20986;-presidential2020-&#33274;&#21271;&#24066;&#32317;&#31080;&#25976;&#36229;&#36942;-10-&#33836;&#30340;&#34892;&#25919;&#21312;&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-town-&#33287;-total_votes-&#36889;&#20841;&#20491;&#35722;&#25976;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[44]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
       <th>town</th>
-      <th>total_votes</th>
+      <th>Kuo_Cheng</th>
+      <th>Ing_Te</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>大安區</td>
-      <td>182001</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>士林區</td>
-      <td>177249</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>內湖區</td>
-      <td>177062</td>
-    </tr>
-    <tr>
-      <th>3</th>
       <td>文山區</td>
-      <td>167936</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>北投區</td>
-      <td>156354</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>中山區</td>
-      <td>141880</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>信義區</td>
-      <td>138516</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>松山區</td>
-      <td>125561</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>萬華區</td>
-      <td>118574</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-CASE-&#25944;&#36848;&#65292;&#23559;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#31080;&#25976;&#21152;&#32317;&#20998;&#39006;&#28858;&#20845;&#37117;&#65288;&#33274;&#21271;&#24066;&#12289;&#26032;&#21271;&#24066;&#12289;&#26691;&#22290;&#24066;&#12289;&#33274;&#20013;&#24066;&#12289;&#33274;&#21335;&#24066;&#33287;&#39640;&#38596;&#24066;&#65289;&#21644;&#38750;&#20845;&#37117;&#65292;&#21629;&#21517;&#36889;&#20491;&#39006;&#21029;&#28858;-county_type&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-county_type-&#33287;-total_votes-&#36889;&#20841;&#20491;&#35722;&#25976;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>CASE</code> &#25944;&#36848;&#65292;&#23559; <code>presidential2020</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#31080;&#25976;&#21152;&#32317;&#20998;&#39006;&#28858;&#20845;&#37117;&#65288;&#33274;&#21271;&#24066;&#12289;&#26032;&#21271;&#24066;&#12289;&#26691;&#22290;&#24066;&#12289;&#33274;&#20013;&#24066;&#12289;&#33274;&#21335;&#24066;&#33287;&#39640;&#38596;&#24066;&#65289;&#21644;&#38750;&#20845;&#37117;&#65292;&#21629;&#21517;&#36889;&#20491;&#39006;&#21029;&#28858; <code>county_type</code>&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858; <code>total_votes</code>&#65292;&#36984;&#25799; <code>county_type</code> &#33287; <code>total_votes</code> &#36889;&#20841;&#20491;&#35722;&#25976;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-CASE-&#25944;&#36848;&#65292;&#23559;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#31080;&#25976;&#21152;&#32317;&#20998;&#39006;&#28858;&#20845;&#37117;&#65288;&#33274;&#21271;&#24066;&#12289;&#26032;&#21271;&#24066;&#12289;&#26691;&#22290;&#24066;&#12289;&#33274;&#20013;&#24066;&#12289;&#33274;&#21335;&#24066;&#33287;&#39640;&#38596;&#24066;&#65289;&#21644;&#38750;&#20845;&#37117;&#65292;&#21629;&#21517;&#36889;&#20491;&#39006;&#21029;&#28858;-county_type&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-county_type-&#33287;-total_votes-&#36889;&#20841;&#20491;&#35722;&#25976;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[46]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>county_type</th>
-      <th>total_votes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>六都</td>
-      <td>10039325</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>非六都</td>
-      <td>4261615</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-CASE-&#25944;&#36848;&#65292;&#35336;&#31639;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#22312;&#20845;&#37117;&#65288;&#33274;&#21271;&#24066;&#12289;&#26032;&#21271;&#24066;&#12289;&#26691;&#22290;&#24066;&#12289;&#33274;&#20013;&#24066;&#12289;&#33274;&#21335;&#24066;&#33287;&#39640;&#38596;&#24066;&#65289;&#21644;&#38750;&#20845;&#37117;&#30340;&#24471;&#31080;&#25976;&#20491;&#28858;&#20309;&#65292;&#21629;&#21517;&#36889;&#20491;&#39006;&#21029;&#28858;-county_type&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-number&#12289;candidates&#12289;county_type-&#33287;-total_votes-&#36889;&#22235;&#20491;&#35722;&#25976;">&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992; <code>CASE</code> &#25944;&#36848;&#65292;&#35336;&#31639; <code>presidential2020</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#22312;&#20845;&#37117;&#65288;&#33274;&#21271;&#24066;&#12289;&#26032;&#21271;&#24066;&#12289;&#26691;&#22290;&#24066;&#12289;&#33274;&#20013;&#24066;&#12289;&#33274;&#21335;&#24066;&#33287;&#39640;&#38596;&#24066;&#65289;&#21644;&#38750;&#20845;&#37117;&#30340;&#24471;&#31080;&#25976;&#20491;&#28858;&#20309;&#65292;&#21629;&#21517;&#36889;&#20491;&#39006;&#21029;&#28858; <code>county_type</code>&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858; <code>total_votes</code>&#65292;&#36984;&#25799; <code>number</code>&#12289;<code>candidates</code>&#12289;<code>county_type</code> &#33287; <code>total_votes</code> &#36889;&#22235;&#20491;&#35722;&#25976;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#20351;&#29992;-CASE-&#25944;&#36848;&#65292;&#35336;&#31639;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#22312;&#20845;&#37117;&#65288;&#33274;&#21271;&#24066;&#12289;&#26032;&#21271;&#24066;&#12289;&#26691;&#22290;&#24066;&#12289;&#33274;&#20013;&#24066;&#12289;&#33274;&#21335;&#24066;&#33287;&#39640;&#38596;&#24066;&#65289;&#21644;&#38750;&#20845;&#37117;&#30340;&#24471;&#31080;&#25976;&#20491;&#28858;&#20309;&#65292;&#21629;&#21517;&#36889;&#20491;&#39006;&#21029;&#28858;-county_type&#65292;&#32317;&#31080;&#25976;&#21629;&#21517;&#28858;-total_votes&#65292;&#36984;&#25799;-number&#12289;candidates&#12289;county_type-&#33287;-total_votes-&#36889;&#22235;&#20491;&#35722;&#25976;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[48]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>candidates</th>
-      <th>county_type</th>
-      <th>total_votes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>宋楚瑜/余湘</td>
-      <td>六都</td>
-      <td>427705</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>宋楚瑜/余湘</td>
-      <td>非六都</td>
-      <td>180885</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>韓國瑜/張善政</td>
-      <td>六都</td>
-      <td>3772174</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2</td>
-      <td>韓國瑜/張善政</td>
-      <td>非六都</td>
-      <td>1749945</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3</td>
-      <td>蔡英文/賴清德</td>
-      <td>六都</td>
-      <td>5839446</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>3</td>
-      <td>蔡英文/賴清德</td>
-      <td>非六都</td>
-      <td>2330785</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#29983;&#28079;&#32317;&#21161;&#25915;&#25976;&#65288;assists&#65289;&#26368;&#39640;&#30340;&#29699;&#21729;&#26159;&#35504;">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>nba.db</code> &#30446;&#21069;&#29983;&#28079;&#32317;&#21161;&#25915;&#25976;&#65288;<code>assists</code>&#65289;&#26368;&#39640;&#30340;&#29699;&#21729;&#26159;&#35504;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#29983;&#28079;&#32317;&#21161;&#25915;&#25976;&#65288;assists&#65289;&#26368;&#39640;&#30340;&#29699;&#21729;&#26159;&#35504;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[50]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Chris</td>
-      <td>Paul</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#29983;&#28079;&#32317;&#31811;&#26495;&#29699;-totReb-&#26368;&#39640;&#30340;&#29699;&#21729;&#26159;&#35504;">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>nba.db</code> &#30446;&#21069;&#29983;&#28079;&#32317;&#31811;&#26495;&#29699; <code>totReb</code> &#26368;&#39640;&#30340;&#29699;&#21729;&#26159;&#35504;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#29983;&#28079;&#32317;&#31811;&#26495;&#29699;-totReb-&#26368;&#39640;&#30340;&#29699;&#21729;&#26159;&#35504;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[52]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Dwight</td>
-      <td>Howard</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#20844;&#40575;&#38538;&#65288;Milwaukee-Bucks&#65289;&#30340;&#29699;&#21729;&#38499;&#23481;&#26377;&#35504;">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>nba.db</code> &#30446;&#21069;&#20844;&#40575;&#38538;&#65288;Milwaukee Bucks&#65289;&#30340;&#29699;&#21729;&#38499;&#23481;&#26377;&#35504;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-nba.db-&#30446;&#21069;&#20844;&#40575;&#38538;&#65288;Milwaukee-Bucks&#65289;&#30340;&#29699;&#21729;&#38499;&#23481;&#26377;&#35504;">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[54]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>firstName</th>
-      <th>lastName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Kyle</td>
-      <td>Korver</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Marvin</td>
-      <td>Williams</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Ersan</td>
-      <td>Ilyasova</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Brook</td>
-      <td>Lopez</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Robin</td>
-      <td>Lopez</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>George</td>
-      <td>Hill</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Wesley</td>
-      <td>Matthews</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Eric</td>
-      <td>Bledsoe</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Khris</td>
-      <td>Middleton</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Giannis</td>
-      <td>Antetokounmpo</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Thanasis</td>
-      <td>Antetokounmpo</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Pat</td>
-      <td>Connaughton</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>D.J.</td>
-      <td>Wilson</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>Frank</td>
-      <td>Mason</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>Sterling</td>
-      <td>Brown</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Donte</td>
-      <td>DiVincenzo</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>Cameron</td>
-      <td>Reynolds</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-presidential2016-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#28858;&#20309;&#65292;&#36984;&#25799;-number&#12289;candidates-&#33287;-votes_percentage">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>presidential2016</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#28858;&#20309;&#65292;&#36984;&#25799; <code>number</code>&#12289;<code>candidates</code> &#33287; <code>votes_percentage</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-presidential2016-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#28858;&#20309;&#65292;&#36984;&#25799;-number&#12289;candidates-&#33287;-votes_percentage">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[56]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>candidates</th>
-      <th>votes_percentage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>朱立倫/王如玄</td>
-      <td>0.310409</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>蔡英文/陳建仁</td>
-      <td>0.561234</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>宋楚瑜/徐欣瑩</td>
-      <td>0.128357</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#28858;&#20309;&#65292;&#36984;&#25799;-number&#12289;candidates-&#33287;-votes_percentage">&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426; <code>presidential2020</code> &#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#28858;&#20309;&#65292;&#36984;&#25799; <code>number</code>&#12289;<code>candidates</code> &#33287; <code>votes_percentage</code><a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;&#65306;&#26597;&#35426;-presidential2020-&#19977;&#32068;&#20505;&#36984;&#20154;&#30340;&#24471;&#31080;&#29575;&#28858;&#20309;&#65292;&#36984;&#25799;-number&#12289;candidates-&#33287;-votes_percentage">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">expected_output</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[58]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>number</th>
-      <th>candidates</th>
-      <th>votes_percentage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>宋楚瑜/余湘</td>
-      <td>0.042556</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>韓國瑜/張善政</td>
-      <td>0.386137</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>蔡英文/賴清德</td>
-      <td>0.571307</td>
+      <td>82305</td>
+      <td>78129</td>
     </tr>
   </tbody>
 </table>
@@ -16883,7 +16227,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/datainpoint/classroom-introduction-to-sql/master?filepath=03-suggested-answers.ipynb">資料分析：隨堂練習參考解答</a></p>
+<h2 id="&#38568;&#22530;&#32244;&#32722;">&#38568;&#22530;&#32244;&#32722;<a class="anchor-link" href="#&#38568;&#22530;&#32244;&#32722;">&#182;</a></h2><p><a href="https://mybinder.org/v2/gh/datainpoint/classroom-introduction-to-sql/master?filepath=04-suggested-answers.ipynb">聯結表格：隨堂練習參考解答</a></p>
 
 </div>
 </div>
