@@ -25,12 +25,11 @@
 
 如何將投影片轉換為 PDF 格式並下載？
 - 在網址後面加上 `?print-pdf` 成為 `slides.html?print-pdf` 並按下 Enter
-- 將網址貼上至 Chrome 瀏覽器
 - 檔案 > 列印... > 另存為 PDF
 
 ## 隨堂練習上傳表單
 
-<https://forms.gle/BvJ2DMhMosR4aj8B9>
+<https://forms.gle/ic9dqyuc1HtzoGjt7>
 
 ## 延伸閱讀
 
